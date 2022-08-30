@@ -108,15 +108,22 @@ fi
 - Clone this repository to your home directory.
 
 ```sh
-git clone https://github.com/magicmonty/bash-git-prompt.git ~/.bash-git-prompt --depth=1
+git clone https://github.com/pseudocc/bash-git-prompt.git ~/.bash-git-prompt --depth=1
 ```
 
+Use the Custom theme that shows git user name.
 Add to the `~/.bashrc`:
 ```
 if [ -f "$HOME/.bash-git-prompt/gitprompt.sh" ]; then
     GIT_PROMPT_ONLY_IN_REPO=1
+    GIT_PROMPT_THEME=Custom
     source $HOME/.bash-git-prompt/gitprompt.sh
 fi
+```
+
+Open another bash prompt or run `source ~/.bashrc`, then:
+```
+git_prompt_make_custom_them "Custom"
 ```
 
 ### install for the fish shell
